@@ -46,6 +46,7 @@ $ iojs server
  - Modal images to allow users to click and see a bigger version of images
  - Add night mode
  - Support for more than one chat room
+ - List users instead of just listing amount of online users
 
 License
 ----
