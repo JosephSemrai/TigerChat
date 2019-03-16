@@ -113,7 +113,7 @@ HiChat.prototype = {
                 reader.onload = function(e) {
                     this.value = '';
                     that.socket.emit('img', e.target.result, color);
-                    that._displayImage('me', e.target.result, color);
+                    that._displayImage('You', e.target.result, color);
                 };
                 reader.readAsDataURL(file);
             };
@@ -164,9 +164,9 @@ HiChat.prototype = {
     _displayImage: function(user, imgData, color) {
         var container = document.getElementById('historyMsg'),
             msgToDisplay = document.createElement('p'),
-            date = new Date().toTimeString().substr(0, 8);
+            date = tConvert(new Date().toTimeString().substr(0, 8));
         msgToDisplay.style.color = color || '#000';
-        msgToDisplay.innerHTML = user + '<span class="timespan">(' + date + '): </span> <br/>' + '<a href="' + imgData + '" target="_blank"><img src="' + imgData + '"/></a>';
+        msgToDisplay.innerHTML = '<span class="timespan">(' + date + ') </span>' + "<b>" + user + ": </b>" + '<img src="' + imgData + '"/>';
         container.appendChild(msgToDisplay);
         container.scrollTop = container.scrollHeight;
     },

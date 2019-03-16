@@ -69,7 +69,7 @@ html, body {
 }
 
 #historyMsg img {
-    max-width: 99%;
+    max-width:15vw;
 }
 .timespan {
     color:#d63031;
@@ -80,22 +80,21 @@ html, body {
 
 /*custom the file input*/
 
-.sendImage {
+.imageLabel {
     position: relative;
     overflow: hidden;
-    float: left;
     clear: left;
-  }
-  .sendImage input[type="file"] {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    font-size: 100px;
-    filter: alpha(opacity=0);
-    cursor: pointer;
-  }
+}
+.imageLabel input[type="file"] {
+display: block;
+position: absolute;
+top: 0;
+right: 0;
+opacity: 0;
+font-size: 100px;
+filter: alpha(opacity=0);
+cursor: pointer;
+}
 
 #messageInput {
     width: 84%;
@@ -112,7 +111,6 @@ html, body {
     width: 13%;
     height: 40%;
     float: right;
-    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     text-align: center;
@@ -120,6 +118,7 @@ html, body {
     font-size: 14px;
     font-family: 'Muli', sans-serif;
     border-radius: 50px;
+    animation: colorchange 8s ease infinite;
 }
 #loginBtn
 {
@@ -151,6 +150,35 @@ html, body {
     font-family: 'Muli', sans-serif;
     border-radius: 50px;
   }
+  #imageBtn {
+    background-color: #03A9F4; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding-left:20px;
+    padding-right:20px;
+    height:40px;
+    font-family: 'Muli', sans-serif;
+    border-radius: 50px;
+  }
+  #emoji { /*button for emojis */
+    background-color: #03A9F4; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding-left:20px;
+    padding-right:20px;
+    height:40px;
+    font-family: 'Muli', sans-serif;
+    border-radius: 50px;
+  }
+ 
  
   #colorStyle {
     background-color: #03A9F4; /* Green */
@@ -181,6 +209,7 @@ html, body {
 #status{
     height:2vh;
 }
+
 .emoji{
     display: inline;
 }
@@ -190,6 +219,89 @@ footer {
     font-family: 'Muli', sans-serif;
 }
 
+/* Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+
+
+/* Animations */
 @keyframes slide-up {
     0% {
         opacity: 0;
@@ -199,4 +311,23 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+@keyframes colorchange
+{
+    0%   {background: #eea849;}
+    25%  {background: #fc00ff;}
+    50%  {background: #00C9FF;}
+    75%  {background: #92FE9D;}
+    100% {background: #f46b45;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: #eea849;}
+  25%  {background: #fc00ff;}
+  50%  {background: #00C9FF;}
+  75%  {background: #92FE9D;}
+  100% {background: #f46b45;}
 }
