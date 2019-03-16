@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Wayou">
+        <meta name="description" content="MCHS Chat | Chat built for Academic Success">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MCHS Chat</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="banner">
+                <h1>MCHS Chat 🏫</h1>
+                <span id="status"></span>
+            </div>
+            <div id="historyMsg">
+            </div>
+            <div class="controls" >
+                <!-- <div class="items">
+                    
+                    <input id="smallbutton" type="button" value="emoji" title="emoji" />
+                    <label for="sendImage" class="imageLable">
+                        <input type="button" value="image"  />
+                        <input id="sendImage" type="file" value="image"/>
+                    </label>
+                    <input id="smallbutton" type="button" value="Clear Chat" title="clear screen" />
+                    <input id="colorStyle" type="color" placeHolder='#000' title="font color" />
+                </div>
+                <textarea id="messageInput" placeHolder="Type your message"></textarea>
+                <input id="sendBtn" type="button" value="→">
+                <div id="emojiWrapper">
+                </div> -->
+                <div class="items">
+                    <input id="colorStyle" type="color" placeHolder='#000' title="font color" />
+                    <input id="emoji" type="button" value="emoji" title="emoji" />
+                    <label for="sendImage" class="imageLable">
+                        <input class="sendImage"/>
+                        <input type="button" value="image"  />
+                    </label>
+                    <input id="clearBtn" type="button" value="Clear" title="clear screen" />
+                </div>
+                <textarea id="messageInput" placeHolder="enter to send"></textarea>
+                <input id="sendBtn" type="button" value="SEND">
+                <div id="emojiWrapper">
+                </div>
+                
+                <footer>
+                <br><br><p>Improved on by Joseph Semrai | MIT License</p>
+                </footer>
+            </div>
+        </div>
+        <div id="loginWrapper">
+            <p id="info">Connecting to server...</p>
+            <div id="nickWrapper">
+                <input type="text" placeHolder="Nickname" id="nicknameInput"/><br>
+                <input type="button" value="Connect" id="loginBtn"/>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="scripts/hichat.js"></script>
+    </body>
+</html>

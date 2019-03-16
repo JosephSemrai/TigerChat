@@ -1,0 +1,202 @@
+html, body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Muli', sans-serif;
+}
+.wrapper {
+    width: 75%;
+    height: 75%;
+    padding: 5px;
+    margin-bottom: -50px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+#loginWrapper {
+    font-size: 3em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 140, 255, 0.849);
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding-top: 200px;
+}
+#nickWrapper {
+    display: none;
+}
+#nicknameInput{
+    font-family: 'Muli', sans-serif;
+    font-size:.9em;
+    height:14vh;
+    width:40%;
+    padding-left:2em;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    border: 1px solid #E5E5E5;
+    background: #FBFBFB;
+    border-radius:500px;
+    animation: slide-up 0.4s ease;
+}
+.banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+.banner p {
+    float: left;
+    display: inline-block;
+}
+.controls {
+    position: fixed;
+    height: 12vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    width:75%;
+    animation: slide-up 0.9s ease;
+}
+#historyMsg {
+    background-color: #fff;
+    overflow: auto;
+    margin-top:9vh;
+    padding-bottom:10vh;
+    height:72vh;
+}
+
+#historyMsg img {
+    max-width: 99%;
+}
+.timespan {
+    color:#d63031;
+}
+.items {
+    height: 50px;
+}
+
+/*custom the file input*/
+
+.sendImage {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    clear: left;
+  }
+  .sendImage input[type="file"] {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    font-size: 100px;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+  }
+
+#messageInput {
+    width: 84%;
+    max-width: 84%;
+    height: 27%;
+    max-height: 27%;
+    float:left;
+    padding-top:10px;
+    padding-left:20px;
+    font-family: 'Muli', sans-serif;
+    border-radius: 50px;
+}
+#sendBtn {
+    width: 13%;
+    height: 40%;
+    float: right;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Muli', sans-serif;
+    border-radius: 50px;
+}
+#loginBtn
+{
+    height:12vh;
+    width:24vh;
+    padding:2vh;
+    margin-top:2vh;
+    background-color: rgba(204, 0, 255, 0.377); /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: .5em;
+    font-family: 'Muli', sans-serif;
+    border-radius:500px;
+    animation: slide-up 1s ease;
+}
+#clearBtn {
+    background-color: #03A9F4; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding-left:20px;
+    padding-right:20px;
+    height:40px;
+    font-family: 'Muli', sans-serif;
+    border-radius: 50px;
+  }
+ 
+  #colorStyle {
+    background-color: #03A9F4; /* Green */
+    margin: 2px;
+    padding: 7px;
+    width: 25px;
+    height: 24px;
+    border: none;
+    border-radius: 18px;
+}
+#emojiWrapper {
+    display: none;
+    width: 500px;
+    bottom: 105px;
+    position: absolute;
+    background-color: #aaa;
+    box-shadow: 0 0 10px #555;
+}
+#emojiWrapper img {
+    margin: 2px;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+}
+#emojiWrapper img:hover {
+    background-color: blue;
+}
+#status{
+    height:2vh;
+}
+.emoji{
+    display: inline;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
