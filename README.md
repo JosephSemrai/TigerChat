@@ -1,4 +1,4 @@
-![#TigerChat](https://user-images.githubusercontent.com/29003194/54636209-4d8c5580-4a5c-11e9-8bf6-0a0d11387862.png)
+![#TigerChat](https://user-images.githubusercontent.com/29003194/54636485-f470f180-4a5c-11e9-8aff-cf47c0d63257.png)
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 Fast, modern chat application built with Node.js and socket.io
